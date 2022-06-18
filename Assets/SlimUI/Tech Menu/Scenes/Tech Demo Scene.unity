@@ -1290,14 +1290,73 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1584668965222168, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605886969202752, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1889233451659056, guid: 58601189f96c7004a8d574ae06560c82, type: 3}
       propertyPath: m_Name
       value: Btn_Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114076378694464424, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_text
+      value: 'DESIGNED BY
+
+
+
+        ERDEM AKYUZ
+
+
+        HASAN ERDEM AK
+
+
+        IZLEM
+        DENIZ KAYA'
       objectReference: {fileID: 0}
     - target: {fileID: 114417321767088670, guid: 58601189f96c7004a8d574ae06560c82,
         type: 3}
       propertyPath: newSceneName
       value: SampleScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114520692338690106, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114520692338690106, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114520692338690106, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 665333694}
+    - target: {fileID: 114520692338690106, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114520692338690106, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 114520692338690106, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114520692338690106, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 114620941503589072, guid: 58601189f96c7004a8d574ae06560c82,
         type: 3}
@@ -1324,6 +1383,41 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114905117615292138, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114905117615292138, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114905117615292138, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 665333694}
+    - target: {fileID: 114905117615292138, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114905117615292138, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 114905117615292138, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114905117615292138, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 114958166145988108, guid: 58601189f96c7004a8d574ae06560c82,
         type: 3}
       propertyPath: m_text
@@ -1348,6 +1442,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114995009934801108, guid: 58601189f96c7004a8d574ae06560c82,
+        type: 3}
+      propertyPath: m_text
+      value: EHI SOLUTIONS 2022
       objectReference: {fileID: 0}
     - target: {fileID: 223755256868501534, guid: 58601189f96c7004a8d574ae06560c82,
         type: 3}

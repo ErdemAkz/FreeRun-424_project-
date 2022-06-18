@@ -283,8 +283,8 @@ public class UIManagerTech : MonoBehaviour
 
 		if(showMenuBar){
 			// Menu Bar and Clock/Date Elements
-			DateTime time = DateTime.Now;
-			if(showTime){timeDisplay.text = time.Hour + ":" + time.Minute + ":" + time.Second;}else if(!showTime){timeDisplay.text = "";}
+			//DateTime time = DateTime.Now;
+			if(showTime){timeDisplay.text = DateTime.Now.ToString("HH:mm:ss");}else if(!showTime){timeDisplay.text = "";}
 			if(showDate){dateDisplay.text = System.DateTime.Now.ToString("yyyy/MM/dd");}else if(!showDate){dateDisplay.text = "";}
 		}
 	}
