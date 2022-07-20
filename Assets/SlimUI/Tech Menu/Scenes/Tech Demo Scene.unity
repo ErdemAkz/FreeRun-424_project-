@@ -1321,7 +1321,7 @@ PrefabInstance:
     - target: {fileID: 114417321767088670, guid: 58601189f96c7004a8d574ae06560c82,
         type: 3}
       propertyPath: newSceneName
-      value: SampleScene
+      value: WallRunningScene
       objectReference: {fileID: 0}
     - target: {fileID: 114520692338690106, guid: 58601189f96c7004a8d574ae06560c82,
         type: 3}
