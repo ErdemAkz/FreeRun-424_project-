@@ -5,6 +5,27 @@ using TMPro;
 
 public class GunSystem : MonoBehaviour
 {
+
+    public float fireRate = 0.25f;                                      // Number in seconds which controls how often the player can fire
+    public float weaponRange = 20f;                                     // Distance in Unity units over which the player can fire
+
+    public Transform gunEnd;
+    public ParticleSystem muzzleFlash;
+    public ParticleSystem cartridgeEjection;
+
+    public GameObject metalHitEffect;
+    public GameObject sandHitEffect;
+    public GameObject stoneHitEffect;
+    public GameObject waterLeakEffect;
+    public GameObject waterLeakExtinguishEffect;
+    public GameObject[] fleshHitEffects;
+    public GameObject woodHitEffect;
+
+    private float nextFire;                                             // Float to store the time the player will be allowed to fire again, after firing
+    private Animator anim;
+    private GunAim gunAim;
+
+
     //Gun stats
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
@@ -17,13 +38,13 @@ public class GunSystem : MonoBehaviour
 
     //Reference
     public Camera fpsCam;
-    public Transform attackPoint;
+    //public Transform attackPoint;
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
 
     //Graphics
-    public GameObject muzzleFlash, bulletHoleGraphic;
-    public CamShake camShake;
+    //public ParticleSystem muzzleFlash, bulletHoleGraphic;
+    public CameraShake camShake;
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
 
@@ -31,13 +52,17 @@ public class GunSystem : MonoBehaviour
     {
         bulletsLeft = magazineSize;
         readyToShoot = true;
+
+        anim = GetComponent<Animator>();
+        gunAim = GetComponentInParent<GunAim>();
     }
     private void Update()
     {
         MyInput();
 
         //SetText
-        text.SetText(bulletsLeft + " / " + magazineSize);
+        text.text = bulletsLeft + " / " + magazineSize;
+
     }
     private void MyInput()
     {
@@ -55,6 +80,7 @@ public class GunSystem : MonoBehaviour
     }
     private void Shoot()
     {
+        Debug.Log("Vurdu");
         readyToShoot = false;
 
         //Spread
@@ -69,16 +95,27 @@ public class GunSystem : MonoBehaviour
         {
             Debug.Log(rayHit.collider.name);
 
-            if (rayHit.collider.CompareTag("Enemy"))
-                rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);
+            /*if (rayHit.collider.CompareTag("Enemy"))
+                rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);*/
         }
 
         //ShakeCamera
         camShake.Shake(camShakeDuration, camShakeMagnitude);
 
         //Graphics
-        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
-        Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        //Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
+        //Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+
+        muzzleFlash.Play();
+        cartridgeEjection.Play();
+        anim.SetTrigger("Fire");
+
+        Vector3 rayOrigin = gunEnd.position;
+        RaycastHit hit;
+        if (Physics.Raycast(rayOrigin, gunEnd.forward, out hit, weaponRange))
+        {
+            HandleHit(hit);
+        }
 
         bulletsLeft--;
         bulletsShot--;
@@ -101,5 +138,50 @@ public class GunSystem : MonoBehaviour
     {
         bulletsLeft = magazineSize;
         reloading = false;
+    }
+
+
+    void HandleHit(RaycastHit hit)
+    {
+        if (hit.collider.sharedMaterial != null)
+        {
+            string materialName = hit.collider.sharedMaterial.name;
+
+            switch (materialName)
+            {
+                case "Metal":
+                    SpawnDecal(hit, metalHitEffect);
+                    break;
+                case "Sand":
+                    SpawnDecal(hit, sandHitEffect);
+                    break;
+                case "Stone":
+                    SpawnDecal(hit, stoneHitEffect);
+                    break;
+                case "WaterFilled":
+                    SpawnDecal(hit, waterLeakEffect);
+                    SpawnDecal(hit, metalHitEffect);
+                    break;
+                case "Wood":
+                    SpawnDecal(hit, woodHitEffect);
+                    break;
+                case "Meat":
+                    SpawnDecal(hit, fleshHitEffects[Random.Range(0, fleshHitEffects.Length)]);
+                    break;
+                case "Character":
+                    SpawnDecal(hit, fleshHitEffects[Random.Range(0, fleshHitEffects.Length)]);
+                    break;
+                case "WaterFilledExtinguish":
+                    SpawnDecal(hit, waterLeakExtinguishEffect);
+                    SpawnDecal(hit, metalHitEffect);
+                    break;
+            }
+        }
+    }
+
+    void SpawnDecal(RaycastHit hit, GameObject prefab)
+    {
+        GameObject spawnedDecal = GameObject.Instantiate(prefab, hit.point, Quaternion.LookRotation(hit.normal));
+        spawnedDecal.transform.SetParent(hit.collider.transform);
     }
 }
