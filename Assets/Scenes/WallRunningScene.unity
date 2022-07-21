@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.8210329, g: 0.911249, b: 0.90102303, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -327,7 +327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 201164381}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 384415545}
   - component: {fileID: 384415548}
   - component: {fileID: 384415549}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,6 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7d098ff9a842e4494799047d1092b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraShake: {fileID: 1453276651}
   orientation: {fileID: 1927024245}
   moveSpeed: 6
   airMultiplier: 0.4
@@ -395,7 +396,7 @@ MonoBehaviour:
   groundCheck: {fileID: 201164381}
   groundMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 65
   groundDistance: 0.1
 --- !u!54 &384415546
 Rigidbody:
@@ -530,7 +531,7 @@ GameObject:
   - component: {fileID: 460531516}
   - component: {fileID: 460531515}
   - component: {fileID: 460531514}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +629,7 @@ GameObject:
   - component: {fileID: 592283383}
   - component: {fileID: 592283382}
   - component: {fileID: 592283381}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,7 +918,7 @@ GameObject:
   - component: {fileID: 708650621}
   - component: {fileID: 708650620}
   - component: {fileID: 708650619}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1011,7 +1012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 913843235}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1057,7 @@ GameObject:
   - component: {fileID: 927645042}
   - component: {fileID: 927645041}
   - component: {fileID: 927645040}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1154,7 @@ GameObject:
   - component: {fileID: 1064387389}
   - component: {fileID: 1064387388}
   - component: {fileID: 1064387387}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,7 +1251,7 @@ GameObject:
   - component: {fileID: 1080346744}
   - component: {fileID: 1080346743}
   - component: {fileID: 1080346742}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1347,7 +1348,7 @@ GameObject:
   - component: {fileID: 1110212082}
   - component: {fileID: 1110212081}
   - component: {fileID: 1110212080}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1444,7 +1445,7 @@ GameObject:
   - component: {fileID: 1122070564}
   - component: {fileID: 1122070563}
   - component: {fileID: 1122070562}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1540,6 +1541,7 @@ GameObject:
   - component: {fileID: 1453276648}
   - component: {fileID: 1453276650}
   - component: {fileID: 1453276649}
+  - component: {fileID: 1453276651}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1601,7 +1603,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1613,6 +1615,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1453276651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453276647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac8940ca6a16c84eae70b4d9205a581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1836258722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1927024245}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1750,7 +1764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2147116543}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Camera Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
