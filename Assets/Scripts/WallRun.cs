@@ -118,6 +118,6 @@ public class WallRun : MonoBehaviour
         rb.useGravity = true;
 
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, fov, wallRunfovTime * Time.deltaTime);
-        tilt = Mathf.Lerp(tilt, camTilt, camTiltTime * Time.deltaTime);
+        tilt = Mathf.Lerp(tilt, 0, camTiltTime * Time.deltaTime);
     }
 }
