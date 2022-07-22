@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class GunSystem : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class GunSystem : MonoBehaviour
     private Animator anim;
     private GunAim gunAim;
 
+
+    [SerializeField]
+    private TrailRenderer BulletTrail;
+
+    public AudioClip shootingSound;
+    public AudioClip reloadingSound;
 
     //Gun stats
     public int damage;
@@ -72,7 +79,7 @@ public class GunSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
 
         //Shoot
-        if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
+        if (readyToShoot && shooting && !reloading && bulletsLeft > 0 && !gunAim.GetIsOutOfBounds())
         {
             bulletsShot = bulletsPerTap;
             Shoot();
@@ -83,24 +90,30 @@ public class GunSystem : MonoBehaviour
         Debug.Log("Vurdu");
         readyToShoot = false;
 
+        AudioSource.PlayClipAtPoint(shootingSound, transform.position);
+
         //Spread
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
 
         //Calculate Direction with Spread
-        Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
+        Vector3 direction = fpsCam.transform.forward; //+ new Vector3(x, y, 0);
 
         //RayCast
         if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
         {
             Debug.Log(rayHit.collider.name);
+            HandleHit(rayHit);
 
             /*if (rayHit.collider.CompareTag("Enemy"))
                 rayHit.collider.GetComponent<ShootingAi>().TakeDamage(damage);*/
+
+            TrailRenderer trail = Instantiate(BulletTrail, gunEnd.position, Quaternion.identity);
+            StartCoroutine(SpawnTrail(trail, rayHit));
         }
 
         //ShakeCamera
-        camShake.Shake(camShakeDuration, camShakeMagnitude);
+        StartCoroutine(camShake.Shake(camShakeDuration, camShakeMagnitude));
 
         //Graphics
         //Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
@@ -110,12 +123,12 @@ public class GunSystem : MonoBehaviour
         cartridgeEjection.Play();
         anim.SetTrigger("Fire");
 
-        Vector3 rayOrigin = gunEnd.position;
+        /*Vector3 rayOrigin = gunEnd.position;
         RaycastHit hit;
         if (Physics.Raycast(rayOrigin, gunEnd.forward, out hit, weaponRange))
         {
             HandleHit(hit);
-        }
+        }*/
 
         bulletsLeft--;
         bulletsShot--;
@@ -132,6 +145,7 @@ public class GunSystem : MonoBehaviour
     private void Reload()
     {
         reloading = true;
+        AudioSource.PlayClipAtPoint(reloadingSound, transform.position);
         Invoke("ReloadFinished", reloadTime);
     }
     private void ReloadFinished()
@@ -175,6 +189,10 @@ public class GunSystem : MonoBehaviour
                     SpawnDecal(hit, waterLeakExtinguishEffect);
                     SpawnDecal(hit, metalHitEffect);
                     break;
+                default:
+                    SpawnDecal(hit, metalHitEffect);
+                    break;
+
             }
         }
     }
@@ -184,4 +202,22 @@ public class GunSystem : MonoBehaviour
         GameObject spawnedDecal = GameObject.Instantiate(prefab, hit.point, Quaternion.LookRotation(hit.normal));
         spawnedDecal.transform.SetParent(hit.collider.transform);
     }
+
+
+    private IEnumerator SpawnTrail(TrailRenderer Trail, RaycastHit Hit)
+    {
+        float time = 0;
+        Vector3 startPosition = Trail.transform.position;
+        
+        while (time < 1)
+        {
+            Trail.transform.position = Vector3.Lerp(startPosition, Hit.point, time);
+            time += Time.deltaTime / Trail.time;
+
+            yield return null;
+        }
+
+        Destroy(Trail.gameObject, Trail.time);
+    }
+
 }
