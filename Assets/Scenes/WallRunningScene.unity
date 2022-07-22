@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.8210329, g: 0.911249, b: 0.90102303, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 384415545}
   - component: {fileID: 384415548}
   - component: {fileID: 384415549}
+  - component: {fileID: 384415550}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -463,7 +464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: {fileID: 1927024245}
   wallDistance: 1
-  minimumJumpHeight: 0.5
+  minimumJumpHeight: 1.5
   wallRunGravity: 1
   wallRunJumpForce: 4
   cam: {fileID: 1453276650}
@@ -472,6 +473,30 @@ MonoBehaviour:
   wallRunfovTime: 20
   camTilt: 10
   camTiltTime: 20
+--- !u!114 &384415550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384415544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27033fd96d8eadd4db0f39e69d096777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orientation: {fileID: 1927024245}
+  playerObj: {fileID: 460531513}
+  maxSlideTime: 0.75
+  slideForce: 50
+  slideYScale: 0.5
+  slideKey: 306
+  sliding: 0
+  groundCheck: {fileID: 201164381}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  groundDistance: 0.1
 --- !u!1 &452116123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,7 +1291,7 @@ Transform:
   m_GameObject: {fileID: 1080346740}
   m_LocalRotation: {x: 0, y: 0, z: 0.86602545, w: 0.49999994}
   m_LocalPosition: {x: 7.24, y: 0.6, z: 0}
-  m_LocalScale: {x: 0.5, y: 15, z: 4}
+  m_LocalScale: {x: 0.5, y: 84.01, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 913843235}
