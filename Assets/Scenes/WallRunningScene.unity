@@ -3066,9 +3066,19 @@ PrefabInstance:
       objectReference: {fileID: 1453276650}
     - target: {fileID: 3627442710309050774, guid: db4514a99f98556468b924a8bf6490cc,
         type: 3}
+      propertyPath: spread
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627442710309050774, guid: db4514a99f98556468b924a8bf6490cc,
+        type: 3}
       propertyPath: camShake
       value: 
       objectReference: {fileID: 1453276651}
+    - target: {fileID: 3627442710309050774, guid: db4514a99f98556468b924a8bf6490cc,
+        type: 3}
+      propertyPath: bulletsPerTap
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3627442710309050774, guid: db4514a99f98556468b924a8bf6490cc,
         type: 3}
       propertyPath: shootingSound
@@ -3079,6 +3089,11 @@ PrefabInstance:
       propertyPath: reloadingSound
       value: 
       objectReference: {fileID: 8300000, guid: da180faec8df7f54980d7fb64c7150b2, type: 3}
+    - target: {fileID: 3627442710309050774, guid: db4514a99f98556468b924a8bf6490cc,
+        type: 3}
+      propertyPath: timeBetweenShooting
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6689079470342409800, guid: db4514a99f98556468b924a8bf6490cc,
         type: 3}
       propertyPath: m_Name
