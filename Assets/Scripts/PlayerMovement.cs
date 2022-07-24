@@ -8,14 +8,14 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Transform orientation;
 
-    [Header("References")]
-    public Sliding slide;
+    
+    private Sliding slide;
+    private WallRun wallrun;
 
     [Header("Movement")]
     [SerializeField] float moveSpeed = 6f;
     [SerializeField] float airMultiplier = 0.4f;
-    float movementMultiplier = 10f;
-    public float slideSpeed;
+    public float movementMultiplier = 10f;
 
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Drag")]
     [SerializeField] float groundDrag = 6f;
     [SerializeField] float airDrag = 2f;
+    [SerializeField] float gravityMultiplier;
 
     float horizontalMovement;
     float verticalMovement;
@@ -93,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         slide = GetComponent<Sliding>();
+        wallrun = GetComponent<WallRun>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -167,9 +169,14 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(GetSlopeMoveDirection(slopeMoveDirection) * moveSpeed * movementMultiplier, ForceMode.Acceleration);
         }
+        else if (wallrun.wallrunning)
+        {
+            rb.AddForce(moveDirection.normalized * moveSpeed * movementMultiplier * airMultiplier, ForceMode.Acceleration);
+        }
         else if (!isGrounded)
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * movementMultiplier * airMultiplier, ForceMode.Acceleration);
+            rb.AddForce(-orientation.up * gravityMultiplier * movementMultiplier * airMultiplier, ForceMode.Acceleration);
         }
     }
 }

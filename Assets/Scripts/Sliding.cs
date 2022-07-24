@@ -77,7 +77,7 @@ public class Sliding : MonoBehaviour
 
             if (isGrounded)
             {
-                rb.AddForce(pm.GetSlopeMoveDirection(inputDirection) * slideForce*2, ForceMode.Force);
+                rb.AddForce(pm.GetSlopeMoveDirection(inputDirection) * slideForce*1.5f, ForceMode.Force);
             }
             return;
         }
