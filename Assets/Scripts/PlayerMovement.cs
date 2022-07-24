@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Transform orientation;
 
+    [Header("References")]
+    public Sliding slide;
+
     [Header("Movement")]
     [SerializeField] float moveSpeed = 6f;
     [SerializeField] float airMultiplier = 0.4f;
@@ -89,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        slide = GetComponent<Sliding>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -122,6 +126,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+
+        if (OnSlope() && slide.sliding)
+        {
+            rb.AddForce(orientation.forward * jumpForce, ForceMode.Impulse);
+        }
     }
 
     void ControlSpeed()
