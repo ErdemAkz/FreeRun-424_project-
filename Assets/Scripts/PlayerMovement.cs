@@ -103,16 +103,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine(cameraShake.Shake(.15f, .4f));
-        }
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         MyInput();
         ControlDrag();
         ControlSpeed();
-        Debug.Log(isGrounded);
+        
         if (Input.GetKeyDown(jumpKey) && isGrounded)
         {
             Jump();
