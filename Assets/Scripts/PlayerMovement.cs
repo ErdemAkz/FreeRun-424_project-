@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CameraShake cameraShake;
     float playerHeight = 2f;
 
     [SerializeField] Transform orientation;
