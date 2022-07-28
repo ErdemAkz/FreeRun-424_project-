@@ -26,7 +26,7 @@ public class WallRun : MonoBehaviour
 
     public float tilt { get; private set; }
 
-
+    public bool wallrunning;
     bool wallLeft = false;
     bool wallRight = false;
 
@@ -62,12 +62,10 @@ public class WallRun : MonoBehaviour
             if (wallLeft)
             {
                 StartWallRun();
-                Debug.Log("wall run left");
             }
             else if (wallRight)
             {
                 StartWallRun();
-                Debug.Log("wall run right");
             }
             else
             {
@@ -82,6 +80,7 @@ public class WallRun : MonoBehaviour
 
     void StartWallRun()
     {
+        wallrunning = true;
         rb.useGravity = false;
         rb.AddForce(Vector3.down * wallRunGravity, ForceMode.Force);
 
@@ -115,6 +114,7 @@ public class WallRun : MonoBehaviour
 
     void StopWallRun()
     {
+        wallrunning = false;
         rb.useGravity = true;
 
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, fov, wallRunfovTime * Time.deltaTime);

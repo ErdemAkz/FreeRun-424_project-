@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SlimUI/Tech Menu/Scenes/Tech Demo Scene.unity
+    path: Assets/Plugins/SlimUI/Tech Menu/Scenes/Tech Demo Scene.unity
     guid: bebc050756972234eb97d414dab7df66
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity

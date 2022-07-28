@@ -8,10 +8,17 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Transform orientation;
 
+    
+    private Sliding slide;
+    private WallRun wallrun;
+
     [Header("Movement")]
     [SerializeField] float moveSpeed = 6f;
     [SerializeField] float airMultiplier = 0.4f;
-    float movementMultiplier = 10f;
+    public float movementMultiplier = 10f;
+
+    private float desiredMoveSpeed;
+    private float lastDesiredMoveSpeed;
 
     [Header("Sprinting")]
     [SerializeField] float walkSpeed = 4f;
@@ -29,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Drag")]
     [SerializeField] float groundDrag = 6f;
     [SerializeField] float airDrag = 2f;
+    [SerializeField] float gravityMultiplier;
 
     float horizontalMovement;
     float verticalMovement;
@@ -47,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     RaycastHit slopeHit;
 
-    private bool OnSlope()
+    public bool OnSlope()
     {
         if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight / 2 + 0.5f))
         {
@@ -63,8 +71,30 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
+    public Vector3 GetSlopeMoveDirection(Vector3 direction)
+    {
+        return Vector3.ProjectOnPlane(direction, slopeHit.normal).normalized;
+    }
+
+    private IEnumerable SmoothlyLerpMoveSpeed()
+    {
+        float time = 0;
+        float difference = Mathf.Abs(desiredMoveSpeed - moveSpeed);
+        float startValue = moveSpeed;
+
+        while (time < difference)
+        {
+            moveSpeed = Mathf.Lerp(startValue, desiredMoveSpeed, time / difference);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        moveSpeed = desiredMoveSpeed;
+    }
+
     private void Start()
     {
+        slide = GetComponent<Sliding>();
+        wallrun = GetComponent<WallRun>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -77,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
         MyInput();
         ControlDrag();
         ControlSpeed();
-
+        
         if (Input.GetKeyDown(jumpKey) && isGrounded)
         {
             Jump();
@@ -98,6 +128,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+
+        if (OnSlope() && slide.sliding)
+        {
+            rb.AddForce(orientation.forward * jumpForce, ForceMode.Impulse);
+        }
     }
 
     void ControlSpeed()
@@ -132,12 +167,16 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (isGrounded && OnSlope())
         {
-            rb.AddForce(slopeMoveDirection.normalized * moveSpeed * movementMultiplier, ForceMode.Acceleration);
+            rb.AddForce(GetSlopeMoveDirection(slopeMoveDirection) * moveSpeed * movementMultiplier, ForceMode.Acceleration);
+        }
+        else if (wallrun.wallrunning)
+        {
+            rb.AddForce(moveDirection.normalized * moveSpeed * movementMultiplier * airMultiplier, ForceMode.Acceleration);
         }
         else if (!isGrounded)
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * movementMultiplier * airMultiplier, ForceMode.Acceleration);
+            rb.AddForce(-orientation.up * gravityMultiplier * movementMultiplier * airMultiplier, ForceMode.Acceleration);
         }
     }
-
 }
