@@ -14,7 +14,7 @@ public class BlinkEffect : MonoBehaviour
     void Awake()
     {
         ren = GetComponent<Renderer>();
-        startColor = ren.material.color;
+        //startColor = ren.material.color;
     }
 
     void Update()

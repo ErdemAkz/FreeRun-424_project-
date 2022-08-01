@@ -12,7 +12,7 @@ public class JumpPad : MonoBehaviour
     {
         GameObject bouncer = collision.gameObject;
         Rigidbody rb = bouncer.GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.up * bounceHeight, ForceMode.Impulse);
+        rb.AddForce(transform.up * bounceHeight, ForceMode.Impulse);
     }
 
 }
