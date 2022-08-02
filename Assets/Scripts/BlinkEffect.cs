@@ -9,6 +9,8 @@ public class BlinkEffect : MonoBehaviour
     [Range(0, 10)]
     public float speed = 1;
 
+    public int materialIndex = 0;
+
     Renderer ren;
 
     void Awake()
@@ -19,6 +21,6 @@ public class BlinkEffect : MonoBehaviour
 
     void Update()
     {
-        ren.material.color = Color.Lerp(startColor, endColor, Mathf.PingPong(Time.time * speed, 1));
+        ren.materials[materialIndex].color = Color.Lerp(startColor, endColor, Mathf.PingPong(Time.time * speed, 1));
     }
 }
