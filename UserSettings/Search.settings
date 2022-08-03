@@ -10,9 +10,9 @@ scopes = {
 	"last_search.8440E7BB" = "playerinput"
 	"OpenInspectorPreview.8440E7BB" = "0"
 	"currentGroup.8440E7BB" = "all"
-	"last_search.8040E7BB" = "audio listener"
+	"last_search.8040E7BB" = "skybox"
 	"OpenInspectorPreview.8040E7BB" = "0"
-	"currentGroup.8040E7BB" = "all"
+	"currentGroup.8040E7BB" = "menu"
 }
 providers = {
 	adb = {
@@ -57,7 +57,7 @@ providers = {
 	}
 }
 recentSearches = [
-	"a"
+	"sk"
 ]
 searchItemFavorites = [
 ]

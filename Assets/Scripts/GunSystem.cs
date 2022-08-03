@@ -80,7 +80,7 @@ public class GunSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
 
         //Shoot
-        if (readyToShoot && shooting && !reloading && bulletsLeft > 0 && !gunAim.GetIsOutOfBounds())
+        if (readyToShoot && shooting && !reloading && bulletsLeft > 0)// && !gunAim.GetIsOutOfBounds())
         {
             bulletsShot = bulletsPerTap;
             Shoot();
