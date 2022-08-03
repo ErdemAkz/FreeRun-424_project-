@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     
     private Sliding slide;
     private WallRun wallrun;
+    private GunSystem gunsystem;
 
     [Header("Movement")]
     [SerializeField] float moveSpeed = 6f;
@@ -178,5 +179,42 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(moveDirection.normalized * moveSpeed * movementMultiplier * airMultiplier, ForceMode.Acceleration);
             rb.AddForce(-orientation.up * gravityMultiplier * movementMultiplier * airMultiplier, ForceMode.Acceleration);
         }
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.name == "Plane0")
+        {
+            rb.transform.position = new Vector3(1.0f, 2.47f, 0.25f);
+        }
+        if (collider.gameObject.name == "Plane1")
+        {
+            rb.transform.position = new Vector3(2.07f, -6.73f, 139.4f);
+        }
+        if (collider.gameObject.name == "Plane2")
+        {
+            rb.transform.position = new Vector3(195.1f, -19.24f, 139.4f);
+        }
+        if (collider.gameObject.name == "Plane3")
+        {
+            rb.transform.position = new Vector3(195.1f, -19.24f, 139.4f);
+        }
+        if (collider.gameObject.name == "Plane4")
+        {
+            rb.transform.position = new Vector3(195.1f, -19.24f, 139.4f);
+        }
+        if (collider.gameObject.name == "Plane5")
+        {
+            rb.transform.position = new Vector3(219.2f, 42.01f, 2.85f);
+        }
+        if (collider.gameObject.name == "Plane6")
+        {
+            rb.transform.position = new Vector3(219.2f, 42.01f, 2.85f);
+        }
+        if (collider.gameObject.name == "Plane7")
+        {
+            rb.transform.position = new Vector3(76.53f, 8.29f, -87.96f);
+        }
+
     }
 }

@@ -31,6 +31,7 @@ public class GunSystem : MonoBehaviour
     private TrailRenderer BulletTrail;
 
     public AudioClip shootingSound;
+    public AudioClip hitSound;
     public AudioClip reloadingSound;
 
     //Gun stats
@@ -162,10 +163,16 @@ public class GunSystem : MonoBehaviour
         {
             string materialName = hit.collider.sharedMaterial.name;
 
+            if (hit.collider.gameObject.layer == 12)
+            {
+                hit.collider.gameObject.SetActive(false);
+            }
+
             switch (materialName)
             {
                 case "Metal":
                     SpawnDecal(hit, metalHitEffect);
+                    AudioSource.PlayClipAtPoint(hitSound, transform.position);
                     break;
                 case "Sand":
                     SpawnDecal(hit, sandHitEffect);
