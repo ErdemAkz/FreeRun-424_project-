@@ -10,7 +10,7 @@ scopes = {
 	"last_search.8440E7BB" = "playerinput"
 	"OpenInspectorPreview.8440E7BB" = "0"
 	"currentGroup.8440E7BB" = "all"
-	"last_search.8040E7BB" = "console"
+	"last_search.8040E7BB" = "audio listener"
 	"OpenInspectorPreview.8040E7BB" = "0"
 	"currentGroup.8040E7BB" = "all"
 }
@@ -57,6 +57,7 @@ providers = {
 	}
 }
 recentSearches = [
+	"a"
 ]
 searchItemFavorites = [
 ]
