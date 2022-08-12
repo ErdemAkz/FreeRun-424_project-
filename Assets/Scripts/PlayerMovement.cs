@@ -247,6 +247,22 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.transform.position = new Vector3(215.79f, 6.21f, 200.99f);
         }
+        //-------------------------------------------------------------------------------
+
+        //EASY LEVEL TELEPORTERS-------------------------------------------------------
+        if (collider.gameObject.name == "Plane0_easy")
+        {
+            rb.transform.position = new Vector3(7.8f, 15.47f, -44.2f);
+        }
+        if (collider.gameObject.name == "Plane1_easy")
+        {
+            rb.transform.position = new Vector3(7.8f, -12.37f, 181.59f);
+        }
+        if (collider.gameObject.name == "Plane2_easy")
+        {
+            rb.transform.position = new Vector3(7.8f, -22.2f, 332.6f);
+        }
+
 
     }
 }
