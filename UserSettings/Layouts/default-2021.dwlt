@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 60
+  controlID: 104993
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 61
+  controlID: 104994
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,11 +165,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1020
-    height: 479.33334
+    height: 345.33334
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 36
+  controlID: 104995
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,7 +188,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 338.66666
-    height: 479.33334
+    height: 345.33334
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -214,7 +214,7 @@ MonoBehaviour:
     x: 338.66666
     y: 0
     width: 681.3334
-    height: 479.33334
+    height: 345.33334
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -240,9 +240,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 479.33334
+    y: 345.33334
     width: 1020
-    height: 99.99997
+    height: 233.99997
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
@@ -301,7 +301,7 @@ MonoBehaviour:
     x: 339.66666
     y: 19
     width: 679.3334
-    height: 329.66666
+    height: 324.33334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 679.3334, y: 308.66666}
+  m_TargetSize: {x: 679.3334, y: 303.33334}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -329,8 +329,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -226.44446
     m_HBaseRangeMax: 226.44446
-    m_VBaseRangeMin: -102.888885
-    m_VBaseRangeMax: 102.888885
+    m_VBaseRangeMin: -101.111115
+    m_VBaseRangeMax: 101.111115
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -349,9 +349,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 679.3334
-      height: 308.66666
+      height: 303.33334
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 339.6667, y: 154.33333}
+    m_Translation: {x: 339.6667, y: 151.66667}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -359,12 +359,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -339.6667
-      y: -154.33333
+      y: -151.66667
       width: 679.3334
-      height: 308.66666
+      height: 303.33334
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1019.00006, y: 494.5}
+  m_LastWindowPixelSize: {x: 1019.00006, y: 486.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -394,17 +394,17 @@ MonoBehaviour:
     x: 0
     y: 72.66667
     width: 337.66666
-    height: 458.33334
+    height: 324.33334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 36fbffff
+      scrollPos: {x: 0, y: 336.66666}
+      m_SelectedIDs: c832feff
+      m_LastClickedID: -118072
+      m_ExpandedIDs: 263ffeffa661fefffc93feffb8e3feffdaf1ffffe2f1ffffe8f1fffff2f1fffff8f1ffff1cf2ffff36fbffff985c0000765e00007e5e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -452,7 +452,7 @@ MonoBehaviour:
     x: 338.6667
     y: 72.66667
     width: 679.3334
-    height: 458.33334
+    height: 324.33334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -506,7 +506,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25.999998}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -654,9 +654,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -66.88952, y: -38.775543, z: 8.96215}
+    m_Target: {x: -116.73493, y: -10.797047, z: 76.0467}
     speed: 2
-    m_Value: {x: -66.88952, y: -38.775543, z: 8.96215}
+    m_Value: {x: -116.73493, y: -10.797047, z: 76.0467}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -703,17 +703,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.120424524, y: 0.7389806, z: 0.13722536, w: 0.6485237}
+    m_Target: {x: 0.030245684, y: -0.7240371, z: 0.03179659, w: 0.68839276}
     speed: 2
-    m_Value: {x: -0.120424524, y: 0.7389806, z: 0.13722536, w: 0.6485237}
+    m_Value: {x: -0.030245684, y: 0.7240371, z: -0.031796593, w: -0.6883928}
   m_Size:
-    m_Target: 313.00293
+    m_Target: 130.27412
     speed: 2
-    m_Value: 313.00293
+    m_Value: 124.66423
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -785,9 +785,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 552
+    y: 418
     width: 1019
-    height: 78.99997
+    height: 212.99997
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -805,22 +805,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Plugins/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Props
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Plugins/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Prefabs/Props
   m_LastFoldersGridSize: 16
   m_LastProjectPath: "C:\\Users\\izlem\\OneDrive\\Masa\xFCst\xFC\\B\u0130L424\\FreeRun-424_project-"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 149.00003}
-    m_SelectedIDs: 40780000
-    m_LastClickedID: 30784
-    m_ExpandedIDs: 00000000027800000478000006780000087800000a7800000c7800000e78000010780000127800001478000016780000187800001a7800001c7800001e7800002078000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 255.00003}
+    m_SelectedIDs: 840f0100
+    m_LastClickedID: 69508
+    m_ExpandedIDs: 00000000027800000478000006780000087800000a7800000c7800000e780000107800001278000014780000187800001a7800001c7800001e780000207800002e78000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -836,7 +836,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -848,7 +848,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000027800000478000006780000087800000a7800000c7800000e78000010780000127800001478000016780000187800001a7800001c7800001e78000020780000
+    m_ExpandedIDs: 00000000027800000478000006780000087800000a7800000c7800000e780000107800001278000014780000187800001a7800001c7800001e780000207800002e78000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -892,7 +892,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -926,9 +926,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 423.33334
+    y: 418
     width: 1019
-    height: 207.66666
+    height: 212.99997
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
