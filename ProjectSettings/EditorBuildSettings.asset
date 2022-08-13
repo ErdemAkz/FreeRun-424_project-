@@ -11,7 +11,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WallRunningScene.unity
     guid: 5a23a1a4615859d46b42d92079fd80ca
+  - enabled: 1
+    path: Assets/Scenes/KolaySeviyeSahne.unity
+    guid: ffc2ce82cd29dc34cb239707a0b0ff62
+  - enabled: 1
+    path: Assets/Scenes/MidLevelScene.unity
+    guid: c9efef60b20bba5459338738b0c1a6a0
+  - enabled: 1
+    path: Assets/Scenes/HardLevelScene.unity
+    guid: 589ad06f15b3b994794efe92f11a2031
   m_configObjects: {}
