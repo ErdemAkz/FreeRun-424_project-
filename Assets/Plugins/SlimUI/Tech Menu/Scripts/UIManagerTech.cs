@@ -67,6 +67,7 @@ public class UIManagerTech : MonoBehaviour
 	public bool showTime = true;
 
 	[Header("Loading Screen Elements")]
+	public ToggleGroup toggleGroup;
 	[Tooltip("The name of the scene loaded when a 'NEW GAME' is started")]
 	public string newSceneName;
 	[Tooltip("The loading bar Slider UI element in the Loading Screen")]
@@ -251,16 +252,21 @@ public class UIManagerTech : MonoBehaviour
 
 	// Called when loading new game scene
 	public void LoadNewLevel (){
+		Toggle toggle = toggleGroup.GetFirstActiveToggle();
+		switch (toggle.name)
+        {
+			case "BeginnerToggle":
+				newSceneName = "KolaySeviyeSahne";
+				break;
+			case "MediumToggle":
+				newSceneName = "MidLevelScene";
+				break;
+			case "ExpertToggle":
+				newSceneName = "HardLevelScene";
+				break;
+		}
 		if(newSceneName != ""){
 			StartCoroutine(LoadAsynchronously(newSceneName));
-		}
-	}
-
-	// Called when loading saved scene
-	// Add the save code in this function!
-	public void LoadSavedLevel (){
-		if(loadSceneName != ""){
-			StartCoroutine(LoadAsynchronously(newSceneName)); // temporarily uses New Scene Name. Change this to 'loadSceneName' when you program the save data
 		}
 	}
 
