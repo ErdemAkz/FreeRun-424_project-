@@ -18,6 +18,8 @@ public class GunAim:MonoBehaviour
 
 	void Update()
 	{
+		if (Time.timeScale == 0f) return;
+
 		float mouseX = Input.mousePosition.x;
 		float mouseY = Input.mousePosition.y;
 

@@ -31,6 +31,8 @@ public class PlayerLookV2 : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (Time.timeScale == 0f) return;
+
         mouseX = Input.GetAxisRaw("Mouse X");
         mouseY = Input.GetAxisRaw("Mouse Y");
 

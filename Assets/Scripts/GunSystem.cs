@@ -68,6 +68,8 @@ public class GunSystem : MonoBehaviour
     }
     private void Update()
     {
+        if (Time.timeScale == 0f) return;
+
         MyInput();
 
         //SetText
