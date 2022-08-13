@@ -9,11 +9,15 @@ public class ayaksesi : MonoBehaviour
     bool isMoving;
     public float timebetweenSteps;
     float timer;
+    public PlayerMovement pm;
+    public Sliding sliding;
     
     // Start is called before the first frame update
     void Start()
     {
         source = GetComponent<AudioSource>();
+        pm = gameObject.GetComponentInParent(typeof(PlayerMovement)) as PlayerMovement;
+        sliding = gameObject.GetComponentInParent(typeof(Sliding)) as Sliding;
     }
 
     // Update is called once per frame
@@ -34,7 +38,8 @@ public class ayaksesi : MonoBehaviour
             if(timer<=0){
                 timer = timebetweenSteps;
                 source.clip = footstepsounds[Random.Range(0,footstepsounds.Length-1)];
-                source.Play();
+                if (pm.isGrounded && !sliding.sliding)
+                    source.Play();
             }
         }
         else{

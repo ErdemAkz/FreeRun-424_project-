@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.820064, g: 0.41256303, b: 0.68612015, a: 1}
+  m_IndirectSpecularColor: {r: 0.820041, g: 0.41258463, b: 0.6861036, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7877,7 +7877,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -9910,7 +9910,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 20d2d7095a3b13c43baf263091e3a359, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 860f1173a910ecd45bc17ddefecfd75f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10014,6 +10014,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f3e564ab55b5ba24d824b7ca71950c73, type: 3}
   - {fileID: 8300000, guid: 804ccf0daf6961c44be50e798ad6aec4, type: 3}
   timebetweenSteps: 0.6
+  pm: {fileID: 0}
+  sliding: {fileID: 0}
 --- !u!1001 &1682181084
 PrefabInstance:
   m_ObjectHideFlags: 0
