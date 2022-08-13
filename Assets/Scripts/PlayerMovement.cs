@@ -183,6 +183,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        //HARD LEVEL TELEPORTERS---------------------------------------------------------
         if (collider.gameObject.name == "Plane0")
         {
             rb.transform.position = new Vector3(1.0f, 2.47f, 0.25f);
@@ -215,6 +216,53 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.transform.position = new Vector3(76.53f, 8.29f, -87.96f);
         }
+        //-------------------------------------------------------------------------------
+
+        //MEDIUM LEVEL TELEPORTERS-------------------------------------------------------
+        if (collider.gameObject.name == "PlaneMid0")
+        {
+            rb.transform.position = new Vector3(1.5f, 1.5f, 1.5f);
+        }
+        if (collider.gameObject.name == "PlaneMid1")
+        {
+            rb.transform.position = new Vector3(-17.43f, 4.4f, 96.24f);
+        }
+        if (collider.gameObject.name == "PlaneMid2")
+        {
+            rb.transform.position = new Vector3(-17.43f, 4.4f, 96.24f);
+        }
+        if (collider.gameObject.name == "PlaneMid3")
+        {
+            rb.transform.position = new Vector3(-17.43f, 4.4f, 96.24f);
+        }
+        if (collider.gameObject.name == "PlaneMid4")
+        {
+            rb.transform.position = new Vector3(-15.23f, 11.23f, 199.776f);
+        }
+        if (collider.gameObject.name == "PlaneMid5")
+        {
+            rb.transform.position = new Vector3(103.62f, 11.23f, 171.04f);
+        }
+        if (collider.gameObject.name == "PlaneMid6")
+        {
+            rb.transform.position = new Vector3(215.79f, 6.21f, 200.99f);
+        }
+        //-------------------------------------------------------------------------------
+
+        //EASY LEVEL TELEPORTERS-------------------------------------------------------
+        if (collider.gameObject.name == "Plane0_easy")
+        {
+            rb.transform.position = new Vector3(7.8f, 15.47f, -44.2f);
+        }
+        if (collider.gameObject.name == "Plane1_easy")
+        {
+            rb.transform.position = new Vector3(7.8f, -12.37f, 181.59f);
+        }
+        if (collider.gameObject.name == "Plane2_easy")
+        {
+            rb.transform.position = new Vector3(7.8f, -22.2f, 332.6f);
+        }
+
 
     }
 }
