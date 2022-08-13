@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Transform orientation;
 
-    
+    private GrapplingGun grapplingGun;
     private Sliding slide;
     private WallRun wallrun;
     private GunSystem gunsystem;
@@ -97,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
         slide = GetComponent<Sliding>();
         wallrun = GetComponent<WallRun>();
         rb = GetComponent<Rigidbody>();
+        grapplingGun = GetComponentInChildren(typeof(GrapplingGun)) as GrapplingGun;
         rb.freezeRotation = true;
     }
 
@@ -186,34 +187,42 @@ public class PlayerMovement : MonoBehaviour
         //HARD LEVEL TELEPORTERS---------------------------------------------------------
         if (collider.gameObject.name == "Plane0")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(1.0f, 2.47f, 0.25f);
         }
         if (collider.gameObject.name == "Plane1")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(2.07f, -6.73f, 139.4f);
         }
         if (collider.gameObject.name == "Plane2")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(195.1f, -19.24f, 139.4f);
         }
         if (collider.gameObject.name == "Plane3")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(195.1f, -19.24f, 139.4f);
         }
         if (collider.gameObject.name == "Plane4")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(195.1f, -19.24f, 139.4f);
         }
         if (collider.gameObject.name == "Plane5")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(219.2f, 42.01f, 2.85f);
         }
         if (collider.gameObject.name == "Plane6")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(219.2f, 42.01f, 2.85f);
         }
         if (collider.gameObject.name == "Plane7")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(76.53f, 8.29f, -87.96f);
         }
         //-------------------------------------------------------------------------------
@@ -221,30 +230,37 @@ public class PlayerMovement : MonoBehaviour
         //MEDIUM LEVEL TELEPORTERS-------------------------------------------------------
         if (collider.gameObject.name == "PlaneMid0")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(1.5f, 1.5f, 1.5f);
         }
         if (collider.gameObject.name == "PlaneMid1")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(-17.43f, 4.4f, 96.24f);
         }
         if (collider.gameObject.name == "PlaneMid2")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(-17.43f, 4.4f, 96.24f);
         }
         if (collider.gameObject.name == "PlaneMid3")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(-17.43f, 4.4f, 96.24f);
         }
         if (collider.gameObject.name == "PlaneMid4")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(-15.23f, 11.23f, 199.776f);
         }
         if (collider.gameObject.name == "PlaneMid5")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(103.62f, 11.23f, 171.04f);
         }
         if (collider.gameObject.name == "PlaneMid6")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(215.79f, 6.21f, 200.99f);
         }
         //-------------------------------------------------------------------------------
@@ -252,14 +268,17 @@ public class PlayerMovement : MonoBehaviour
         //EASY LEVEL TELEPORTERS-------------------------------------------------------
         if (collider.gameObject.name == "Plane0_easy")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(7.8f, 15.47f, -44.2f);
         }
         if (collider.gameObject.name == "Plane1_easy")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(7.8f, -12.37f, 181.59f);
         }
         if (collider.gameObject.name == "Plane2_easy")
         {
+            grapplingGun.StopGrapple();
             rb.transform.position = new Vector3(7.8f, -22.2f, 332.6f);
         }
 
