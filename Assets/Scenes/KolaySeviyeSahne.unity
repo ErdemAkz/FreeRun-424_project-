@@ -2756,11 +2756,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428461861}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 804ccf0daf6961c44be50e798ad6aec4, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: ac285a73b7f02eb4bb0c8e02456a200c, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2845,24 +2845,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1428461863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428461861}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1378fe5fedfb0046aec834200416191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  footstepsounds:
-  - {fileID: 8300000, guid: 20d2d7095a3b13c43baf263091e3a359, type: 3}
-  - {fileID: 8300000, guid: 860f1173a910ecd45bc17ddefecfd75f, type: 3}
-  - {fileID: 8300000, guid: f3e564ab55b5ba24d824b7ca71950c73, type: 3}
-  - {fileID: 8300000, guid: 804ccf0daf6961c44be50e798ad6aec4, type: 3}
-  timebetweenSteps: 0.6
 --- !u!4 &1428461869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6744183110701620745, guid: 24de90aa08921064abd1567d87c973ad,
