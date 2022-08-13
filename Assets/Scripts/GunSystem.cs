@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Random = UnityEngine.Random;
+using UnityEngine.Audio;
 
 public class GunSystem : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class GunSystem : MonoBehaviour
     [SerializeField]
     private TrailRenderer BulletTrail;
 
+    public AudioMixer audioMixer;
     public AudioClip shootingSound;
     public AudioClip hitSound;
     public AudioClip reloadingSound;
@@ -88,10 +90,9 @@ public class GunSystem : MonoBehaviour
     }
     private void Shoot()
     {
-        Debug.Log("Vurdu");
         readyToShoot = false;
 
-        AudioSource.PlayClipAtPoint(shootingSound, transform.position);
+        AudioSource.PlayClipAtPoint(shootingSound, transform.position, AudioManager.Instance.GetSfxVolumeLevel());
 
         //Spread
         float x = Random.Range(-spread, spread);
@@ -147,7 +148,7 @@ public class GunSystem : MonoBehaviour
     private void Reload()
     {
         reloading = true;
-        AudioSource.PlayClipAtPoint(reloadingSound, transform.position);
+        AudioSource.PlayClipAtPoint(reloadingSound, transform.position, AudioManager.Instance.GetSfxVolumeLevel());
         Invoke("ReloadFinished", reloadTime);
     }
     private void ReloadFinished()
@@ -167,12 +168,12 @@ public class GunSystem : MonoBehaviour
             {
                 hit.collider.gameObject.SetActive(false);
             }
-
+            
             switch (materialName)
             {
                 case "Metal":
                     SpawnDecal(hit, metalHitEffect);
-                    AudioSource.PlayClipAtPoint(hitSound, transform.position);
+                    AudioSource.PlayClipAtPoint(hitSound, transform.position, AudioManager.Instance.GetSfxVolumeLevel());
                     break;
                 case "Sand":
                     SpawnDecal(hit, sandHitEffect);
