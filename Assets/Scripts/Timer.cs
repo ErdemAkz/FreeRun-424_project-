@@ -51,7 +51,7 @@ public class Timer : MonoBehaviour
 
         if (Physics.Raycast(rayend, out hitInfoEnd, distance))
         {
-            Debug.Log("end!!");
+            
             if (hitInfoEnd.collider.gameObject.CompareTag("Player") && started)
             {
                 //GameEndedText.enabled = true;
