@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ray raystart = new Ray(new Vector3(startwall.transform.position.x, startwall.transform.position.y+1.5f, startwall.transform.position.z), startwall.transform.right);
+        Ray raystart = new Ray(new Vector3(startwall.transform.position.x, startwall.transform.position.y+1.0f, startwall.transform.position.z), startwall.transform.right);
         Ray rayend = new Ray(new Vector3(endwall.transform.position.x-6.0f, endwall.transform.position.y+1.5f, endwall.transform.position.z + 3.0f), endwall.transform.right);
         Debug.DrawRay(raystart.origin, raystart.direction * distance);
         Debug.DrawRay(rayend.origin, rayend.direction * distance);
