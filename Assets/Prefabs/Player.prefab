@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 1147436288}
   - component: {fileID: 871420594}
   - component: {fileID: 1414934885}
-  - component: {fileID: 1414934892}
+  - component: {fileID: 677122620}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -658,7 +658,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1414934892
+--- !u!114 &677122620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -675,6 +675,7 @@ MonoBehaviour:
   distance: 20
   TimerText: {fileID: 0}
   started: 0
+  CurrentTime: 0
 --- !u!1 &6744183110743985674
 GameObject:
   m_ObjectHideFlags: 0
