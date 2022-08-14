@@ -155,6 +155,15 @@ PrefabInstance:
       propertyPath: startwall
       value: 
       objectReference: {fileID: 44328916}
+    - target: {fileID: 1147436288, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147436288, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -492559433839233614, guid: c76f9da9ad4e42d4ead09694debdfc22,
+        type: 2}
     - target: {fileID: 1414934892, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
       propertyPath: endwall
       value: 
