@@ -10674,7 +10674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1227069357279742671
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16142,8 +16142,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIManagerTech, Assembly-CSharp-firstpass
+      - m_Target: {fileID: 1881759732427910601}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
         m_MethodName: UIScaler
         m_Mode: 1
         m_Arguments:
@@ -16584,6 +16584,8 @@ MonoBehaviour:
   GameIsPaused: 0
   pauseMenuUI: {fileID: 1881759732427910603}
   PlayerUICanvas: {fileID: 0}
+  mainCanvas: {fileID: 1409561865241178045}
+  uiScaleSlider: {fileID: 1409143046147615009}
 --- !u!1 &1881759733181920134
 GameObject:
   m_ObjectHideFlags: 0

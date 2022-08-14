@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class PauseManager : MonoBehaviour
     public GameObject pauseMenuUI;
 
     public Canvas PlayerUICanvas;
+
+    public CanvasScaler mainCanvas;
+    public Slider uiScaleSlider;
+    float xScale = 0f;
+    float yScale = 0f;
 
     Transform tempParent;
 
@@ -107,5 +113,12 @@ public class PauseManager : MonoBehaviour
         //tempParent = currentObj.transform.parent;
         tempParent = currentObj.transform;
         tempParent.SetAsLastSibling();
+    }
+
+    public void UIScaler()
+    {
+        xScale = 1920 * uiScaleSlider.value;
+        yScale = 1080 * uiScaleSlider.value;
+        mainCanvas.referenceResolution = new Vector2(xScale, yScale);
     }
 }
