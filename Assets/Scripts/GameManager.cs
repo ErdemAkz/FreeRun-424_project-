@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         gameFinished = false;
         numOfTargetsHit = 0;
     }
-
+    
     // Update is called once per frame
     void Update()
     {

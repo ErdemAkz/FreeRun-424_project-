@@ -13,6 +13,11 @@ public class PauseManager : MonoBehaviour
 
     Transform tempParent;
 
+    private void Awake()
+    {
+        Resume();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -85,8 +90,10 @@ public class PauseManager : MonoBehaviour
         pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
         pauseMenuUI.transform.GetChild(2).gameObject.SetActive(false);
         Time.timeScale = 1f;
+        GameIsPaused = false;
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+        Resume();
     }
 
     public void QuitGame()

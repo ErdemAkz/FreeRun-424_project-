@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
 
     private float startTime;
     public bool started = false;
-    public static float CurrentTime;
+    public float CurrentTime;
 
 
     // Start is called before the first frame update
