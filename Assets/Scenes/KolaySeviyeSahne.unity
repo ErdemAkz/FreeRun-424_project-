@@ -2010,6 +2010,10 @@ PrefabInstance:
       propertyPath: startwall
       value: 
       objectReference: {fileID: 1638672527}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1414934892, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
       propertyPath: endwall
       value: 
