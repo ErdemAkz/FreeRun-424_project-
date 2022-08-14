@@ -8,6 +8,8 @@ public class MoveCamera : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;
+
         transform.position = cameraPosition.position;
     }
 }
