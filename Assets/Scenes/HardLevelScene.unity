@@ -143,6 +143,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 677122620, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
+      propertyPath: endwall
+      value: 
+      objectReference: {fileID: 110130480}
+    - target: {fileID: 677122620, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
+      propertyPath: TimerText
+      value: 
+      objectReference: {fileID: 1109882123}
+    - target: {fileID: 677122620, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
+      propertyPath: startwall
+      value: 
+      objectReference: {fileID: 44328916}
     - target: {fileID: 1414934892, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
       propertyPath: endwall
       value: 
@@ -4051,7 +4063,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1756070019896396, guid: ca3a59584c01c6f4ca55f2f9a7395687, type: 3}
       propertyPath: m_Name
-      value: Gen_Wall_DoorFrame_01_snaps002
+      value: StartWall
       objectReference: {fileID: 0}
     - target: {fileID: 1756070019896396, guid: ca3a59584c01c6f4ca55f2f9a7395687, type: 3}
       propertyPath: m_Layer
