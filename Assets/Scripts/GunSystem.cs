@@ -166,9 +166,11 @@ public class GunSystem : MonoBehaviour
         {
             string materialName = hit.collider.sharedMaterial.name;
 
+            // Hitting the target
             if (hit.collider.gameObject.layer == 12)
             {
                 hit.collider.gameObject.SetActive(false);
+                GameManager.Instance.TargetHit();
             }
             
             switch (materialName)

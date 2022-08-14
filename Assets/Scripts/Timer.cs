@@ -54,6 +54,7 @@ public class Timer : MonoBehaviour
             {
                 //GameEndedText.enabled = true;
                 started = false;
+                GameManager.Instance.GameFinished(TimerText.text);
             }
         }
 

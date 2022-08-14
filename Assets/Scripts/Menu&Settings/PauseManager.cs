@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
+    public bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+
+    public Canvas PlayerUICanvas;
 
     Transform tempParent;
 
@@ -38,6 +40,7 @@ public class PauseManager : MonoBehaviour
 
     public void Resume()
     {
+        PlayerUICanvas.gameObject.SetActive(true);
         for (int i = 0; i < pauseMenuUI.transform.GetChild(1).childCount; i++)
         {
             pauseMenuUI.transform.GetChild(1).GetChild(i).gameObject.SetActive(false);
@@ -51,6 +54,7 @@ public class PauseManager : MonoBehaviour
 
     public void Pause()
     {
+        PlayerUICanvas.gameObject.SetActive(false);
         for (int i = 0; i < pauseMenuUI.transform.GetChild(1).childCount; i++)
         {
             pauseMenuUI.transform.GetChild(1).GetChild(i).gameObject.SetActive(false);
@@ -65,6 +69,7 @@ public class PauseManager : MonoBehaviour
 
     public void QuitGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Tech Demo Scene");
     }
 
