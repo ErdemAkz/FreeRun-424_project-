@@ -40,10 +40,8 @@ public class Timer : MonoBehaviour
         RaycastHit hitInfoEnd; // store collision info
         if (Physics.Raycast(raystart, out hitInfoStart, distance))
         {
-            Debug.Log(hitInfoStart.collider.gameObject.tag);
             if (hitInfoStart.collider.gameObject.CompareTag("Player") && !started)
             {
-                Debug.Log("asdasdasdasdas");
                 started = true;
                 startTime = Time.time;
             }
