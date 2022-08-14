@@ -11,7 +11,7 @@ public class DoorButtonBehaviour : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Vector3.Distance(Player.transform.position, transform.position));
+        
         if (Input.GetKey(KeyCode.F) && Vector3.Distance(Player.transform.position, transform.position) < requiredDistanceToBePressed)
         {
             Door.GetComponent<Animation>().Play();
