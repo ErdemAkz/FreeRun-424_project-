@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
+using System;
 
 public class Timer : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Timer : MonoBehaviour
 
     private float startTime;
     public bool started = false;
+    public static float CurrentTime;
 
 
     // Start is called before the first frame update
@@ -35,7 +37,7 @@ public class Timer : MonoBehaviour
         Ray rayend = new Ray(new Vector3(endwall.transform.position.x-6.0f, endwall.transform.position.y+1.5f, endwall.transform.position.z + 3.0f), endwall.transform.right);
         Debug.DrawRay(raystart.origin, raystart.direction * distance);
         Debug.DrawRay(rayend.origin, rayend.direction * distance);
-
+        updateTimer();
         RaycastHit hitInfoStart; // store collision info
         RaycastHit hitInfoEnd; // store collision info
         if (Physics.Raycast(raystart, out hitInfoStart, distance))
@@ -60,14 +62,24 @@ public class Timer : MonoBehaviour
 
         if (started)
         {
-            float t = Time.time - startTime;
-            string minutes = ((int)t / 60).ToString();
-            string seconds = (t % 60).ToString("f0");
+            //float t = Time.time - startTime;
+            //string minutes = ((int)t / 60).ToString();
+            //string seconds = (t % 60).ToString("f0");
 
-            TimerText.text = minutes + ":" + seconds;
+            //TimerText.text = minutes + ":" + seconds;
             //GameEndedText.enabled = false;
         }
 
 
+    }
+
+    void updateTimer()
+    {
+        if (started)
+        {
+            CurrentTime += Time.deltaTime;
+            TimeSpan timeSpan = TimeSpan.FromSeconds(CurrentTime);
+            TimerText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);//currentTime.ToString("0.00");
+        }
     }
 }
