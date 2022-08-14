@@ -1998,6 +1998,18 @@ PrefabInstance:
       propertyPath: startwall
       value: 
       objectReference: {fileID: 1638672527}
+    - target: {fileID: 1414934892, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
+      propertyPath: endwall
+      value: 
+      objectReference: {fileID: 1902968174}
+    - target: {fileID: 1414934892, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
+      propertyPath: TimerText
+      value: 
+      objectReference: {fileID: 1059292075}
+    - target: {fileID: 1414934892, guid: 24de90aa08921064abd1567d87c973ad, type: 3}
+      propertyPath: startwall
+      value: 
+      objectReference: {fileID: 1638672527}
     - target: {fileID: 6744183110701620745, guid: 24de90aa08921064abd1567d87c973ad,
         type: 3}
       propertyPath: m_RootOrder
