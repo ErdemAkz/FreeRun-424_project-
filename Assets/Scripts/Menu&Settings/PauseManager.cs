@@ -67,6 +67,28 @@ public class PauseManager : MonoBehaviour
         GameIsPaused = true;
     }
 
+    public void ScorePanel()
+    {
+        PlayerUICanvas.gameObject.SetActive(false);
+        pauseMenuUI.transform.GetChild(0).gameObject.SetActive(true);
+        pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
+        pauseMenuUI.transform.GetChild(2).gameObject.SetActive(true);
+        //pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    public void Restart()
+    {
+        PlayerUICanvas.gameObject.SetActive(true);
+        pauseMenuUI.transform.GetChild(0).gameObject.SetActive(false);
+        pauseMenuUI.transform.GetChild(1).gameObject.SetActive(false);
+        pauseMenuUI.transform.GetChild(2).gameObject.SetActive(false);
+        Time.timeScale = 1f;
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
+
     public void QuitGame()
     {
         Time.timeScale = 1f;
