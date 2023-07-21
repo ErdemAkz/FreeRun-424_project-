@@ -34,22 +34,22 @@ Welcome to FreeRun, an exciting first-person perspective (FPS) game where player
 ## Screenshots
 
 Main Menu
-![Screenshot 1](screenshots/screenshot_MainMenu.png)
+![screenshot_MainMenu](https://github.com/ErdemAkz/FreeRun-424_project-/assets/70165677/41082c3d-61a3-485d-af69-f588d8253e89)
 
 New Game Panel
-![Screenshot 2](screenshots/screenshot_NewGamePanel.png)
+![screenshot_NewGamePanel](https://github.com/ErdemAkz/FreeRun-424_project-/assets/70165677/eba16f57-993c-45e1-a8ac-0d4a666a1138)
 
 First Person Perspective
-![Screenshot 3](screenshots/screenshot_MediumSceneStart.png)
+![screenshot_MediumSceneStart](https://github.com/ErdemAkz/FreeRun-424_project-/assets/70165677/9d9f8f69-5211-4174-8c97-a9ce58e41c45)
 
 Easy Level
-![Screenshot 4](screenshots/screenshot_EasyLevel.png)
+![screenshot_EasyLevel](https://github.com/ErdemAkz/FreeRun-424_project-/assets/70165677/eb501b94-568d-40b5-b8b2-eca0cfd9905d)
 
 Medium Level
-![Screenshot 5](screenshots/screenshot_MediumLevel.png)
+![screenshot_MediumLevel](https://github.com/ErdemAkz/FreeRun-424_project-/assets/70165677/9ed91943-02bf-4404-adcc-76bf8d43a189)
 
 Expert Level
-![Screenshot 6](screenshots/screenshot_HardLevel.png)
+![screenshot_HardLevel](https://github.com/ErdemAkz/FreeRun-424_project-/assets/70165677/b2dd7296-8df3-4ff2-b477-13eb9cab7cfa)
 
 ## Sample Gameplay
 
