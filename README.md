@@ -33,9 +33,23 @@ Welcome to FreeRun, an exciting first-person perspective (FPS) game where player
 
 ## Screenshots
 
+Main Menu
 ![Screenshot 1](screenshots/screenshot_MainMenu.png)
+
+New Game Panel
 ![Screenshot 2](screenshots/screenshot_NewGamePanel.png)
-![Screenshot 3](screenshots/screenshot_MediumSceneStarting.png)
+
+Medium Level Start
+![Screenshot 3](screenshots/screenshot_MediumSceneStart.png)
+
+Easy Level
+![Screenshot 4](screenshots/screenshot_EasyLevel.png)
+
+Medium Level
+![Screenshot 5](screenshots/screenshot_MediumLevel.png)
+
+Expert Level
+![Screenshot 6](screenshots/screenshot_HardLevel.png)
 
 ## Sample Gameplay
 
@@ -43,12 +57,24 @@ Welcome to FreeRun, an exciting first-person perspective (FPS) game where player
 
 ## How to Setup and Play
 
+### Option 1: Clone the Repository
+
 1. Clone this repository to your local machine.
 2. Open the Unity project using Unity Hub.
 3. Navigate to the main menu scene and hit the play button to start the game.
 4. Choose the desired difficulty level.
 5. Use the keyboard and mouse to control the player's movements and abilities.
 6. Progress through the map, avoiding obstacles, and reach the finish line as fast as possible.
+
+### Option 2: Download the Build
+
+You can also download the build of the game and run it directly without needing the Unity project.
+
+1. Download the game build from [https://drive.google.com/file/d/1w6Fumg_bztKazIWO-Vp5HttaIYb8-Fnt/view?usp=sharing].
+2. Extract the downloaded archive (if applicable).
+3. Find and run the `FreeRun.exe` executable file.
+4. Choose the desired difficulty level.
+5. Enjoy the game and have fun!
 
 ## Controls
 
