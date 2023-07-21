@@ -70,8 +70,8 @@ Expert Level
 
 You can also download the build of the game and run it directly without needing the Unity project.
 
-1. Download the game build from [https://drive.google.com/file/d/1w6Fumg_bztKazIWO-Vp5HttaIYb8-Fnt/view?usp=sharing].
-2. Extract the downloaded archive (if applicable).
+1. Download the game build from [drive link](https://drive.google.com/file/d/1w6Fumg_bztKazIWO-Vp5HttaIYb8-Fnt/view?usp=sharing).
+2. Extract the downloaded archive.
 3. Find and run the `FreeRun.exe` executable file.
 4. Choose the desired difficulty level.
 5. Enjoy the game and have fun!
