@@ -13,20 +13,20 @@ Welcome to FreeRun, an exciting first-person perspective (FPS) game where player
 
 ## Contributors
 
-- **Hasan Erdem Ak**
+- [**Hasan Erdem Ak**](https://github.com/hasanerdemak)
   - Implemented menus and menu transitions.
   - Set up lighting for scenes.
   - Added camera shaking effect.
   - Created weapon mechanics script and added weapon sound.
   - Designed the medium difficulty level scene.
 
-- **Erdem Akyüz**
+- [**Erdem Akyüz**](https://github.com/ErdemAkz)
   - Added wall running mechanics.
   - Implemented sliding mechanics.
   - Created rope swinging mechanics.
   - Designed the hard difficulty level scene.
 
-- **İzlem Deniz Kaya**
+- [**İzlem Deniz Kaya**](https://github.com/izlemdenizkaya)
   - Designed the skybox.
   - Created the easy difficulty level scene.
   - Added sound effects.
