@@ -39,7 +39,7 @@ Main Menu
 New Game Panel
 ![Screenshot 2](screenshots/screenshot_NewGamePanel.png)
 
-Medium Level Start
+First Person Perspective
 ![Screenshot 3](screenshots/screenshot_MediumSceneStart.png)
 
 Easy Level
@@ -53,7 +53,9 @@ Expert Level
 
 ## Sample Gameplay
 
-![Gameplay](Sample%20Gameplay.mp4)
+https://github.com/ErdemAkz/FreeRun-424_project-/assets/70165677/bb3e9ffe-65cf-4aa8-8a5e-0358849f85be
+
+
 
 ## How to Setup and Play
 
